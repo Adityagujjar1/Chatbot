@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>School Help Chatbot</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #f4f4f4; }
+    #chatbox {
+      border: 1px solid #ccc;
+      background: #fff;
+      padding: 10px;
+      height: 300px;
+      overflow-y: scroll;
+      margin-bottom: 10px;
+    }
+    #userInput { width: 80%; padding: 5px; }
+    button { padding: 5px 10px; }
+  </style>
+</head>
+<body>
+  <h2>Welcome to [Your School] Help Chatbot</h2>
+  <div id="chatbox"></div>
+  <input type="text" id="userInput" placeholder="Ask a question..." />
+  <button onclick="talk()">Send</button>
+
+  <script>
+    const responses = {
+      "what are the school hours": "Our school is open from 8:00 AM to 3:00 PM, Monday to Friday.",
+      "how do i apply": "You can apply online by visiting our admissions page.",
+      "where is the school located": "The school is located at 123 Education Lane, Learnville.",
+      "who is the principal": "Our principal is Ms. Jordan Baker.",
+      "what grades do you teach": "We teach from Kindergarten through 8th Grade.",
+      "": "Please type a question."
+    };
+
+    function talk() {
+      const inputField = document.getElementById('userInput');
+      const input = inputField.value.toLowerCase().trim();
+      const chatbox = document.getElementById('chatbox');
+
+      chatbox.innerHTML += "<div><strong>You:</strong> " + input + "</div>";
+
+      let reply = responses[input] || "I'm sorry, I don't understand that yet.";
+      chatbox.innerHTML += "<div><strong>Bot:</strong> " + reply + "</div>";
+
+      inputField.value = "";
+      chatbox.scrollTop = chatbox.scrollHeight;
+    }
+  </script>
+</body>
+</html>
