@@ -1,1 +1,6 @@
 This is for nehru world school project
+MADE BY 
+1)ADITYA KASANA 
+2)ATHARV TYAGI
+3)PARTH BHARDWAJ
+4)TANUSH KAPOOR
