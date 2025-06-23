@@ -1,25 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>School Help Chatbot</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nehru World School Chatbot</title>
   <style>
-    body { font-family: Arial; padding: 20px; background: #f4f4f4; }
-    #chatbox {
-      border: 1px solid #ccc;
-      background: #fff;
-      padding: 10px;
-      height: 300px;
-      overflow-y: scroll;
-      margin-bottom: 10px;
-    }
-    #userInput { width: 80%; padding: 5px; }
-    button { padding: 5px 10px; }
+    body { font-family: Arial, sans-serif; background-color: #f4f4f9; padding: 20px; }
+    #chatbox { border: 1px solid #ccc; background: #fff; padding: 10px; height: 300px; overflow-y: scroll; margin-bottom: 10px; }
+    #userInput { width: 75%; padding: 10px; }
+    button { padding: 10px 15px; cursor: pointer; background-color: #4CAF50; color: white; border: none; }
   </style>
 </head>
 <body>
-  <h2>Welcome to [Your School] Help Chatbot</h2>
+  <h2>Welcome to Nehru World School Chatbot</h2>
   <div id="chatbox"></div>
-  <input type="text" id="userInput" placeholder="Ask a question..." />
+  <input type="text" id="userInput" placeholder="Ask me something...">
   <button onclick="talk()">Send</button>
 
   <script>
